@@ -1,0 +1,34 @@
+[
+  {
+    "id": "1",
+    "name": "Sarah Johnson",
+    "role": "Tech Enthusiast",
+    "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80",
+    "rating": 5,
+    "review": "Nexus Electronic is my go-to store for all gadgets. The product quality is exceptional and delivery is super fast. Highly recommended!"
+  },
+  {
+    "id": "2",
+    "name": "Marcus Chen",
+    "role": "Software Developer",
+    "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80",
+    "rating": 5,
+    "review": "Bought my MacBook Pro here and the experience was flawless. Genuine products, great pricing, and customer support is top notch."
+  },
+  {
+    "id": "3",
+    "name": "Emily Rodriguez",
+    "role": "Content Creator",
+    "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80",
+    "rating": 4,
+    "review": "Amazing selection of electronics. Found exactly what I needed for my YouTube setup. The site is easy to navigate and checkout was smooth."
+  },
+  {
+    "id": "4",
+    "name": "David Kim",
+    "role": "Photographer",
+    "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&q=80",
+    "rating": 5,
+    "review": "The best electronics store online. Competitive prices, fast shipping, and the products are always authentic. Will definitely shop again!"
+  }
+]

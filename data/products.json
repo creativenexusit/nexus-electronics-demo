@@ -1,0 +1,562 @@
+[
+  {
+    "id": "1",
+    "name": "iPhone 15 Pro Max",
+    "brand": "Apple",
+    "category": "Smartphones",
+    "price": 1199,
+    "originalPrice": 1299,
+    "discount": 8,
+    "rating": 4.9,
+    "reviewCount": 2847,
+    "stock": 25,
+    "isNew": true,
+    "isTrending": true,
+    "isBestSeller": true,
+    "description": "The most powerful iPhone ever. With the A17 Pro chip, a new titanium design, and the most advanced Pro camera system ever in an iPhone.",
+    "features": [
+      "A17 Pro chip with 6-core GPU",
+      "6.7-inch Super Retina XDR display",
+      "48MP Main camera with 5x optical zoom",
+      "Titanium design",
+      "USB-C with USB 3 speeds",
+      "Action button"
+    ],
+    "specifications": {
+      "Display": "6.7-inch OLED Super Retina XDR",
+      "Processor": "Apple A17 Pro",
+      "RAM": "8GB",
+      "Storage": "256GB",
+      "Camera": "48MP + 12MP + 12MP Triple",
+      "Battery": "4422 mAh",
+      "OS": "iOS 17",
+      "Color": "Natural Titanium"
+    },
+    "images": [
+      "https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=600&q=80",
+      "https://images.unsplash.com/photo-1697554547979-99bcbff0dd44?w=600&q=80",
+      "https://images.unsplash.com/photo-1512054502232-10a0a035d672?w=600&q=80"
+    ],
+    "tags": ["smartphone", "apple", "5g", "pro"]
+  },
+  {
+    "id": "2",
+    "name": "Samsung Galaxy S24 Ultra",
+    "brand": "Samsung",
+    "category": "Smartphones",
+    "price": 1099,
+    "originalPrice": 1199,
+    "discount": 8,
+    "rating": 4.8,
+    "reviewCount": 1923,
+    "stock": 18,
+    "isNew": true,
+    "isTrending": true,
+    "isBestSeller": false,
+    "description": "Galaxy AI is here. The most powerful Galaxy S series smartphone with integrated S Pen, 200MP camera, and titanium frame.",
+    "features": [
+      "Snapdragon 8 Gen 3 processor",
+      "6.8-inch Dynamic AMOLED 2X display",
+      "200MP main camera",
+      "Integrated S Pen",
+      "Titanium frame",
+      "7 years of OS updates"
+    ],
+    "specifications": {
+      "Display": "6.8-inch QHD+ AMOLED",
+      "Processor": "Snapdragon 8 Gen 3",
+      "RAM": "12GB",
+      "Storage": "256GB",
+      "Camera": "200MP + 12MP + 10MP + 10MP",
+      "Battery": "5000 mAh",
+      "OS": "Android 14",
+      "Color": "Titanium Black"
+    },
+    "images": [
+      "https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?w=600&q=80",
+      "https://images.unsplash.com/photo-1583573636917-b6f4a36a9d11?w=600&q=80",
+      "https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=600&q=80"
+    ],
+    "tags": ["smartphone", "samsung", "5g", "ultra"]
+  },
+  {
+    "id": "3",
+    "name": "Apple Watch Ultra 2",
+    "brand": "Apple",
+    "category": "Smart Watches",
+    "price": 799,
+    "originalPrice": 849,
+    "discount": 6,
+    "rating": 4.8,
+    "reviewCount": 987,
+    "stock": 12,
+    "isNew": true,
+    "isTrending": true,
+    "isBestSeller": false,
+    "description": "The most capable and rugged Apple Watch. Built for extreme sports and adventures with precision dual-frequency GPS and 60-hour battery life.",
+    "features": [
+      "49mm titanium case",
+      "Precision dual-frequency GPS",
+      "60-hour battery life",
+      "Action button",
+      "Depth gauge and water temperature",
+      "S9 SiP chip"
+    ],
+    "specifications": {
+      "Case Size": "49mm",
+      "Case Material": "Titanium",
+      "Display": "Always-On Retina LTPO OLED",
+      "Battery": "Up to 60 hours",
+      "Water Resistance": "100m",
+      "GPS": "Dual-frequency L1 and L5",
+      "Connectivity": "LTE + Wi-Fi + Bluetooth 5.3",
+      "OS": "watchOS 10"
+    },
+    "images": [
+      "https://images.unsplash.com/photo-1551816230-ef5deaed4a26?w=600&q=80",
+      "https://images.unsplash.com/photo-1579586337278-3befd40fd17a?w=600&q=80",
+      "https://images.unsplash.com/photo-1434493789847-2f02dc6ca35d?w=600&q=80"
+    ],
+    "tags": ["smartwatch", "apple", "fitness", "outdoor"]
+  },
+  {
+    "id": "4",
+    "name": "Samsung Galaxy Watch 6 Classic",
+    "brand": "Samsung",
+    "category": "Smart Watches",
+    "price": 349,
+    "originalPrice": 399,
+    "discount": 13,
+    "rating": 4.6,
+    "reviewCount": 654,
+    "stock": 30,
+    "isNew": false,
+    "isTrending": true,
+    "isBestSeller": true,
+    "description": "Classic design meets advanced health tracking. The rotating bezel returns with comprehensive health monitoring and Galaxy AI features.",
+    "features": [
+      "Rotating bezel design",
+      "Advanced sleep coaching",
+      "Body composition analysis",
+      "ECG and blood pressure monitoring",
+      "Exynos W930 processor",
+      "40-hour battery life"
+    ],
+    "specifications": {
+      "Case Size": "47mm",
+      "Display": "1.5-inch Super AMOLED",
+      "RAM": "2GB",
+      "Storage": "16GB",
+      "Battery": "425 mAh (40 hours)",
+      "Water Resistance": "5ATM + IP68",
+      "OS": "Wear OS 4 + One UI Watch 5",
+      "Connectivity": "LTE + Wi-Fi + Bluetooth 5.3"
+    },
+    "images": [
+      "https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=600&q=80",
+      "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&q=80",
+      "https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?w=600&q=80"
+    ],
+    "tags": ["smartwatch", "samsung", "health", "classic"]
+  },
+  {
+    "id": "5",
+    "name": "Sony WH-1000XM5 Headphones",
+    "brand": "Sony",
+    "category": "Earbuds",
+    "price": 279,
+    "originalPrice": 349,
+    "discount": 20,
+    "rating": 4.9,
+    "reviewCount": 3241,
+    "stock": 45,
+    "isNew": false,
+    "isTrending": true,
+    "isBestSeller": true,
+    "description": "Industry-leading noise canceling headphones with Auto Noise Canceling Optimizer and exceptional 30-hour battery life.",
+    "features": [
+      "Industry-leading ANC",
+      "30-hour battery life",
+      "Multipoint connection (2 devices)",
+      "Speak-to-Chat technology",
+      "360 Reality Audio",
+      "LDAC Hi-Res Audio"
+    ],
+    "specifications": {
+      "Driver": "30mm dynamic",
+      "Frequency": "4Hz - 40,000Hz",
+      "Battery": "30 hours (ANC on)",
+      "Charging": "USB-C, 3-min for 3 hours",
+      "Bluetooth": "5.2",
+      "Weight": "250g",
+      "Foldable": "No",
+      "Color": "Black"
+    },
+    "images": [
+      "https://images.unsplash.com/photo-1583394838336-acd977736f90?w=600&q=80",
+      "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&q=80",
+      "https://images.unsplash.com/photo-1484704849700-f032a568e944?w=600&q=80"
+    ],
+    "tags": ["headphones", "sony", "anc", "wireless"]
+  },
+  {
+    "id": "6",
+    "name": "AirPods Pro 2nd Generation",
+    "brand": "Apple",
+    "category": "Earbuds",
+    "price": 249,
+    "originalPrice": 279,
+    "discount": 11,
+    "rating": 4.8,
+    "reviewCount": 5621,
+    "stock": 60,
+    "isNew": false,
+    "isTrending": true,
+    "isBestSeller": true,
+    "description": "The best AirPods ever with H2 chip, up to 2x more active noise cancellation, and Adaptive Audio for seamless real-world listening.",
+    "features": [
+      "H2 chip for advanced ANC",
+      "Adaptive Transparency mode",
+      "Personalized Spatial Audio",
+      "6 hours listening time (30 with case)",
+      "IP54 resistance",
+      "Find My support"
+    ],
+    "specifications": {
+      "Chip": "Apple H2",
+      "Battery": "6 hours (30 with case)",
+      "ANC": "Active Noise Cancellation",
+      "Transparency": "Adaptive Transparency",
+      "Water Resistance": "IP54",
+      "Connectivity": "Bluetooth 5.3",
+      "Case Charging": "Lightning / MagSafe",
+      "Color": "White"
+    },
+    "images": [
+      "https://images.unsplash.com/photo-1588423771073-b8903fead85b?w=600&q=80",
+      "https://images.unsplash.com/photo-1606220588913-b3aacb4d2f46?w=600&q=80",
+      "https://images.unsplash.com/photo-1600294037681-c80b4cb5b434?w=600&q=80"
+    ],
+    "tags": ["earbuds", "apple", "anc", "wireless"]
+  },
+  {
+    "id": "7",
+    "name": "MacBook Pro 16\" M3 Pro",
+    "brand": "Apple",
+    "category": "Laptops",
+    "price": 2499,
+    "originalPrice": 2699,
+    "discount": 7,
+    "rating": 4.9,
+    "reviewCount": 1102,
+    "stock": 8,
+    "isNew": true,
+    "isTrending": false,
+    "isBestSeller": false,
+    "description": "The most powerful MacBook Pro ever. M3 Pro chip delivers extraordinary performance and battery life for demanding workflows.",
+    "features": [
+      "Apple M3 Pro chip",
+      "16-inch Liquid Retina XDR display",
+      "Up to 22-hour battery life",
+      "36GB unified memory",
+      "Space Black color option",
+      "MagSafe 3 charging"
+    ],
+    "specifications": {
+      "Processor": "Apple M3 Pro (12-core CPU)",
+      "RAM": "36GB Unified Memory",
+      "Storage": "512GB SSD",
+      "Display": "16.2-inch 3456x2234 Liquid Retina XDR",
+      "Battery": "Up to 22 hours",
+      "GPU": "18-core GPU",
+      "Ports": "3x Thunderbolt 4, HDMI, SD Card, MagSafe",
+      "Weight": "2.14 kg"
+    },
+    "images": [
+      "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=600&q=80",
+      "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=600&q=80",
+      "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600&q=80"
+    ],
+    "tags": ["laptop", "apple", "macbook", "m3"]
+  },
+  {
+    "id": "8",
+    "name": "ASUS ROG Zephyrus G14",
+    "brand": "Asus",
+    "category": "Laptops",
+    "price": 1599,
+    "originalPrice": 1799,
+    "discount": 11,
+    "rating": 4.7,
+    "reviewCount": 789,
+    "stock": 15,
+    "isNew": false,
+    "isTrending": true,
+    "isBestSeller": false,
+    "description": "The ultimate gaming ultrabook. Powered by AMD Ryzen 9 and NVIDIA RTX 4060, perfect for gaming and creative professionals.",
+    "features": [
+      "AMD Ryzen 9 8945HS processor",
+      "NVIDIA GeForce RTX 4060 GPU",
+      "14-inch 2.5K 165Hz display",
+      "AniMe Matrix LED display",
+      "ROG Intelligent Cooling",
+      "24GB DDR5 RAM"
+    ],
+    "specifications": {
+      "Processor": "AMD Ryzen 9 8945HS",
+      "GPU": "NVIDIA RTX 4060 8GB",
+      "RAM": "24GB DDR5",
+      "Storage": "1TB PCIe 4.0 NVMe SSD",
+      "Display": "14-inch 2560x1600 165Hz",
+      "Battery": "73Wh (up to 10 hours)",
+      "OS": "Windows 11 Home",
+      "Weight": "1.72 kg"
+    },
+    "images": [
+      "https://images.unsplash.com/photo-1603302576837-37561b2e2302?w=600&q=80",
+      "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=600&q=80",
+      "https://images.unsplash.com/photo-1484788984921-03950022c9ef?w=600&q=80"
+    ],
+    "tags": ["laptop", "gaming", "asus", "rog"]
+  },
+  {
+    "id": "9",
+    "name": "JBL Charge 5 Bluetooth Speaker",
+    "brand": "JBL",
+    "category": "Bluetooth Speakers",
+    "price": 149,
+    "originalPrice": 179,
+    "discount": 17,
+    "rating": 4.7,
+    "reviewCount": 2104,
+    "stock": 40,
+    "isNew": false,
+    "isTrending": false,
+    "isBestSeller": true,
+    "description": "Powerful portable speaker with built-in power bank. IP67 waterproof and dustproof with 20 hours of playtime.",
+    "features": [
+      "JBL Pro Sound quality",
+      "20 hours playtime",
+      "IP67 waterproof + dustproof",
+      "Built-in power bank",
+      "PartyBoost multi-speaker pairing",
+      "USB-C charging"
+    ],
+    "specifications": {
+      "Output Power": "30W RMS",
+      "Battery": "7500 mAh (20 hours)",
+      "Bluetooth": "5.1",
+      "Water Resistance": "IP67",
+      "Frequency": "65Hz - 20kHz",
+      "Charging": "USB-C",
+      "Weight": "960g",
+      "Dimensions": "220 x 97 x 97mm"
+    },
+    "images": [
+      "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=600&q=80",
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80",
+      "https://images.unsplash.com/photo-1545454675-3531b543be5d?w=600&q=80"
+    ],
+    "tags": ["speaker", "jbl", "bluetooth", "waterproof"]
+  },
+  {
+    "id": "10",
+    "name": "Anker PowerCore 26800mAh",
+    "brand": "Anker",
+    "category": "Power Banks",
+    "price": 69,
+    "originalPrice": 89,
+    "discount": 22,
+    "rating": 4.6,
+    "reviewCount": 8432,
+    "stock": 100,
+    "isNew": false,
+    "isTrending": false,
+    "isBestSeller": true,
+    "description": "High-capacity portable charger with 26800mAh capacity. Charge an iPhone 15 nearly 6 times or keep your laptop powered all day.",
+    "features": [
+      "26800mAh high capacity",
+      "3 USB outputs + 1 USB-C",
+      "65W USB-C Power Delivery",
+      "PowerIQ technology",
+      "MultiProtect safety",
+      "Charges 3 devices simultaneously"
+    ],
+    "specifications": {
+      "Capacity": "26800 mAh",
+      "USB-C Output": "65W Power Delivery",
+      "USB-A Output": "3x 5V/3A",
+      "Input": "USB-C 45W",
+      "Weight": "480g",
+      "Dimensions": "163 x 60 x 22mm",
+      "Safety": "MultiProtect 11-point safety",
+      "Color": "Black"
+    },
+    "images": [
+      "https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?w=600&q=80",
+      "https://images.unsplash.com/photo-1585338107529-13afc5f02586?w=600&q=80",
+      "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&q=80"
+    ],
+    "tags": ["powerbank", "anker", "charging", "portable"]
+  },
+  {
+    "id": "11",
+    "name": "Logitech MX Keys S Keyboard",
+    "brand": "Logitech",
+    "category": "Keyboards",
+    "price": 119,
+    "originalPrice": 139,
+    "discount": 14,
+    "rating": 4.8,
+    "reviewCount": 1876,
+    "stock": 55,
+    "isNew": false,
+    "isTrending": false,
+    "isBestSeller": true,
+    "description": "Advanced wireless keyboard designed for creators and professionals. Quiet, precise typing with Smart Backlighting and multi-device support.",
+    "features": [
+      "Smart Backlighting with proximity sensing",
+      "Spherically dished keys",
+      "Multi-device support (3 devices)",
+      "10-day battery (5 months without backlight)",
+      "Logi Bolt wireless",
+      "Compatible with Windows, Mac, Linux"
+    ],
+    "specifications": {
+      "Switch Type": "Tactile (quiet)",
+      "Backlight": "Smart adaptive backlighting",
+      "Battery": "1500 mAh (10 days to 5 months)",
+      "Connectivity": "Logi Bolt + Bluetooth",
+      "Range": "10 meters",
+      "Devices": "Up to 3 simultaneous",
+      "Layout": "Full-size with numpad",
+      "Weight": "810g"
+    },
+    "images": [
+      "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=600&q=80",
+      "https://images.unsplash.com/photo-1541140532154-b024d705b90a?w=600&q=80",
+      "https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?w=600&q=80"
+    ],
+    "tags": ["keyboard", "logitech", "wireless", "mechanical"]
+  },
+  {
+    "id": "12",
+    "name": "Xiaomi Redmi Note 13 Pro+",
+    "brand": "Xiaomi",
+    "category": "Smartphones",
+    "price": 449,
+    "originalPrice": 499,
+    "discount": 10,
+    "rating": 4.5,
+    "reviewCount": 1234,
+    "stock": 35,
+    "isNew": true,
+    "isTrending": false,
+    "isBestSeller": false,
+    "description": "Flagship features at a mid-range price. 200MP camera, 120W HyperCharge, and stunning curved OLED display.",
+    "features": [
+      "200MP Light Fusion 800 camera sensor",
+      "120W HyperCharge (19 min full charge)",
+      "6.67-inch curved OLED 120Hz",
+      "Dimensity 7200 Ultra processor",
+      "IP68 water resistance",
+      "5000 mAh battery"
+    ],
+    "specifications": {
+      "Processor": "MediaTek Dimensity 7200 Ultra",
+      "RAM": "12GB",
+      "Storage": "256GB",
+      "Display": "6.67-inch AMOLED 120Hz",
+      "Camera": "200MP + 8MP + 2MP",
+      "Battery": "5000 mAh",
+      "Charging": "120W HyperCharge",
+      "OS": "MIUI 14 / Android 13"
+    },
+    "images": [
+      "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600&q=80",
+      "https://images.unsplash.com/photo-1574944985070-8f3ebc6b79d2?w=600&q=80",
+      "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=600&q=80"
+    ],
+    "tags": ["smartphone", "xiaomi", "5g", "midrange"]
+  },
+  {
+    "id": "13",
+    "name": "iPad Pro 12.9\" M2",
+    "brand": "Apple",
+    "category": "Accessories",
+    "price": 1099,
+    "originalPrice": 1199,
+    "discount": 8,
+    "rating": 4.8,
+    "reviewCount": 892,
+    "stock": 20,
+    "isNew": false,
+    "isTrending": true,
+    "isBestSeller": false,
+    "description": "The ultimate iPad experience with M2 chip and the world's best tablet display. Liquid Retina XDR with ProMotion technology.",
+    "features": [
+      "Apple M2 chip",
+      "12.9-inch Liquid Retina XDR display",
+      "ProMotion adaptive refresh rate",
+      "Apple Pencil hover support",
+      "Thunderbolt / USB 4 connector",
+      "Wi-Fi 6E support"
+    ],
+    "specifications": {
+      "Processor": "Apple M2 (8-core CPU)",
+      "RAM": "8GB Unified Memory",
+      "Storage": "256GB",
+      "Display": "12.9-inch 2732x2048 Liquid Retina XDR",
+      "Battery": "Up to 10 hours",
+      "Camera": "12MP wide + 10MP ultra-wide",
+      "Connectivity": "Thunderbolt/USB 4",
+      "OS": "iPadOS 16"
+    },
+    "images": [
+      "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=600&q=80",
+      "https://images.unsplash.com/photo-1561154464-82e9adf32764?w=600&q=80",
+      "https://images.unsplash.com/photo-1589739900243-4b52cd9b104e?w=600&q=80"
+    ],
+    "tags": ["tablet", "apple", "ipad", "m2"]
+  },
+  {
+    "id": "14",
+    "name": "Lenovo ThinkPad X1 Carbon Gen 11",
+    "brand": "Lenovo",
+    "category": "Laptops",
+    "price": 1699,
+    "originalPrice": 1999,
+    "discount": 15,
+    "rating": 4.7,
+    "reviewCount": 445,
+    "stock": 10,
+    "isNew": false,
+    "isTrending": false,
+    "isBestSeller": false,
+    "description": "The legendary business ultrabook. Ultra-lightweight at 1.12kg with military-grade durability and Intel vPro for enterprise security.",
+    "features": [
+      "Intel Core i7-1365U vPro",
+      "Ultra-light 1.12kg chassis",
+      "MIL-SPEC durability (12 tests)",
+      "14-inch 2.8K OLED display",
+      "15-hour battery life",
+      "Rapid Charge (80% in 1 hour)"
+    ],
+    "specifications": {
+      "Processor": "Intel Core i7-1365U vPro",
+      "RAM": "32GB LPDDR5",
+      "Storage": "1TB PCIe 4.0 NVMe SSD",
+      "Display": "14-inch 2880x1800 OLED 90Hz",
+      "Battery": "57Wh (up to 15 hours)",
+      "Weight": "1.12 kg",
+      "OS": "Windows 11 Pro",
+      "Ports": "2x Thunderbolt 4, 2x USB-A, HDMI 2.0"
+    },
+    "images": [
+      "https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=600&q=80",
+      "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=600&q=80",
+      "https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=600&q=80"
+    ],
+    "tags": ["laptop", "lenovo", "thinkpad", "business"]
+  }
+]

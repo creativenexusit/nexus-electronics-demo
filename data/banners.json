@@ -1,0 +1,12 @@
+[
+  {
+    "id": "1",
+    "title": "Summer Tech Sale",
+    "subtitle": "Up to 40% Off",
+    "description": "Shop Premium Electronics Today. Limited time offer on top brands.",
+    "buttonText": "Shop The Sale",
+    "buttonLink": "/shop",
+    "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1400&q=80",
+    "bgColor": "from-blue-600 to-purple-700"
+  }
+]

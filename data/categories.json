@@ -1,0 +1,66 @@
+[
+  {
+    "id": "1",
+    "name": "Smartphones",
+    "slug": "smartphones",
+    "productCount": 3,
+    "image": "https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=400&q=80",
+    "icon": "smartphone"
+  },
+  {
+    "id": "2",
+    "name": "Smart Watches",
+    "slug": "smart-watches",
+    "productCount": 2,
+    "image": "https://images.unsplash.com/photo-1551816230-ef5deaed4a26?w=400&q=80",
+    "icon": "watch"
+  },
+  {
+    "id": "3",
+    "name": "Earbuds",
+    "slug": "earbuds",
+    "productCount": 2,
+    "image": "https://images.unsplash.com/photo-1588423771073-b8903fead85b?w=400&q=80",
+    "icon": "headphones"
+  },
+  {
+    "id": "4",
+    "name": "Bluetooth Speakers",
+    "slug": "bluetooth-speakers",
+    "productCount": 1,
+    "image": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=400&q=80",
+    "icon": "speaker"
+  },
+  {
+    "id": "5",
+    "name": "Laptops",
+    "slug": "laptops",
+    "productCount": 3,
+    "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=400&q=80",
+    "icon": "laptop"
+  },
+  {
+    "id": "6",
+    "name": "Power Banks",
+    "slug": "power-banks",
+    "productCount": 1,
+    "image": "https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?w=400&q=80",
+    "icon": "battery"
+  },
+  {
+    "id": "7",
+    "name": "Keyboards",
+    "slug": "keyboards",
+    "productCount": 1,
+    "image": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=400&q=80",
+    "icon": "keyboard"
+  },
+  {
+    "id": "8",
+    "name": "Accessories",
+    "slug": "accessories",
+    "productCount": 1,
+    "image": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=400&q=80",
+    "icon": "grid"
+  }
+]
