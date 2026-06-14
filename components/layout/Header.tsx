@@ -75,7 +75,7 @@ export default function Header() {
                 <div
                   onMouseEnter={() => setCatOpen(true)}
                   onMouseLeave={() => setCatOpen(false)}
-                  className="absolute top-full left-0 mt-2 w-56 bg-white rounded-xl shadow-xl border border-gray-100 py-2 z-50"
+                  className="absolute top-full left-0 mt-0 w-56 bg-white rounded-xl shadow-xl border border-gray-100 py-2 z-50"
                 >
                   {categories.map((cat) => (
                     <Link
