@@ -25,7 +25,7 @@ export default function AboutPage() {
         <div className="absolute inset-0 flex items-center px-4">
           <div className="max-w-7xl mx-auto w-full">
             <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-4">About Us</h1>
-            <p className="text-blue-100 text-lg max-w-lg">Bangladesh's most trusted premium electronics destination since 2020.</p>
+            <p className="text-blue-100 text-lg max-w-lg">Bangladesh s most trusted premium electronics destination since 2020.</p>
           </div>
         </div>
       </section>
@@ -38,7 +38,7 @@ export default function AboutPage() {
             <h2 className="text-3xl font-extrabold text-gray-900 mb-6">Built for Tech Enthusiasts, by Tech Enthusiasts</h2>
             <div className="space-y-4 text-gray-600 leading-relaxed">
               <p>Nexus Electronic was founded in 2020 with a simple mission: make premium electronics accessible to everyone in Bangladesh without compromising on authenticity or service quality.</p>
-              <p>Starting from a small shop in Dhaka's Elephant Road tech hub, we've grown into one of the country's most trusted online electronics retailers, serving over 50,000 satisfied customers nationwide.</p>
+              <p>Starting from a small shop in Dhaka s Elephant Road tech hub, we ve grown into one of the country s most trusted online electronics retailers, serving over 50,000 satisfied customers nationwide.</p>
               <p>Every product we carry is 100% genuine, sourced directly from official brand distributors, and backed by full manufacturer warranties.</p>
             </div>
           </div>
@@ -78,7 +78,7 @@ export default function AboutPage() {
               <span className="text-2xl">🌟</span>
             </div>
             <h3 className="text-2xl font-extrabold text-gray-900 mb-4">Our Vision</h3>
-            <p className="text-gray-600 leading-relaxed">To become South Asia's most trusted electronics marketplace, setting the gold standard for authenticity, service, and technology accessibility.</p>
+            <p className="text-gray-600 leading-relaxed">To become South Asia s most trusted electronics marketplace, setting the gold standard for authenticity, service, and technology accessibility.</p>
           </div>
         </div>
       </section>

@@ -14,7 +14,10 @@ export interface Product {
   isBestSeller: boolean;
   description: string;
   features: string[];
-  specifications: Record<string, string>;
+
+  // Allow optional specification values
+  specifications: Record<string, string | undefined>;
+
   images: string[];
   tags: string[];
 }
@@ -64,14 +67,18 @@ export interface StoreContextType {
   cart: CartItem[];
   wishlist: Product[];
   language: "en" | "bn";
+
   addToCart: (product: Product, quantity?: number) => void;
   removeFromCart: (id: string) => void;
   updateQuantity: (id: string, quantity: number) => void;
+
   toggleWishlist: (product: Product) => void;
   isInWishlist: (id: string) => boolean;
   isInCart: (id: string) => boolean;
+
   cartTotal: number;
   cartCount: number;
+
   toggleLanguage: () => void;
   clearCart: () => void;
 }

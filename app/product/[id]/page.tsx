@@ -4,7 +4,16 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useParams } from "next/navigation";
-import { Star, Heart, ShoppingCart, ChevronLeft, Check, Package, Shield, RotateCcw } from "lucide-react";
+import {
+  Star,
+  Heart,
+  ShoppingCart,
+  Check,
+  Package,
+  Shield,
+  RotateCcw,
+} from "lucide-react";
+
 import { useStore } from "@/context/StoreContext";
 import ProductCard from "@/components/product/ProductCard";
 import products from "@/data/products.json";
@@ -14,22 +23,44 @@ const allProducts = products as Product[];
 
 export default function ProductPage() {
   const params = useParams();
-  const product = allProducts.find((p) => p.id === params.id);
-  const { addToCart, toggleWishlist, isInWishlist, isInCart } = useStore();
+
+  // ✅ SAFE PARAM HANDLING (Next.js 15 compatible)
+  const productId = Array.isArray(params?.id)
+    ? params.id[0]
+    : params?.id ?? "";
+
+  const product = allProducts.find((p) => p.id === productId);
+
+  const { addToCart, toggleWishlist, isInWishlist, isInCart } =
+    useStore();
+
   const [selectedImage, setSelectedImage] = useState(0);
   const [quantity, setQuantity] = useState(1);
 
+  // ❌ Not found UI
   if (!product) {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center gap-4">
         <p className="text-5xl">😕</p>
-        <h1 className="text-2xl font-bold text-gray-900">Product not found</h1>
-        <Link href="/shop" className="text-blue-600 font-medium hover:underline">Back to Shop</Link>
+        <h1 className="text-2xl font-bold text-gray-900">
+          Product not found
+        </h1>
+        <Link
+          href="/shop"
+          className="text-blue-600 font-medium hover:underline"
+        >
+          Back to Shop
+        </Link>
       </div>
     );
   }
 
-  const related = allProducts.filter((p) => p.category === product.category && p.id !== product.id).slice(0, 4);
+  const related = allProducts
+    .filter(
+      (p) => p.category === product.category && p.id !== product.id
+    )
+    .slice(0, 4);
+
   const inWishlist = isInWishlist(product.id);
   const inCart = isInCart(product.id);
 
@@ -37,17 +68,36 @@ export default function ProductPage() {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       {/* Breadcrumb */}
       <nav className="flex items-center gap-2 text-sm text-gray-500 mb-8">
-        <Link href="/" className="hover:text-blue-600">Home</Link>
+        <Link href="/" className="hover:text-blue-600">
+          Home
+        </Link>
+
         <span>/</span>
-        <Link href="/shop" className="hover:text-blue-600">Shop</Link>
+
+        <Link href="/shop" className="hover:text-blue-600">
+          Shop
+        </Link>
+
         <span>/</span>
-        <Link href={`/shop?category=${product.category.toLowerCase().replace(" ", "-")}`} className="hover:text-blue-600">{product.category}</Link>
+
+        <Link
+          href={`/shop?category=${product.category
+            .toLowerCase()
+            .replace(" ", "-")}`}
+          className="hover:text-blue-600"
+        >
+          {product.category}
+        </Link>
+
         <span>/</span>
-        <span className="text-gray-900 font-medium line-clamp-1">{product.name}</span>
+
+        <span className="text-gray-900 font-medium line-clamp-1">
+          {product.name}
+        </span>
       </nav>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-        {/* Left: Images */}
+        {/* LEFT: IMAGES */}
         <div>
           <div className="relative aspect-square bg-gray-50 rounded-3xl overflow-hidden mb-4">
             <Image
@@ -57,67 +107,117 @@ export default function ProductPage() {
               className="object-cover"
               priority
             />
+
             {product.discount > 0 && (
               <div className="absolute top-4 left-4 bg-red-500 text-white text-sm font-bold px-3 py-1 rounded-full">
                 -{product.discount}%
               </div>
             )}
           </div>
+
           <div className="flex gap-3">
             {product.images.map((img, i) => (
               <button
                 key={i}
                 onClick={() => setSelectedImage(i)}
-                className={`relative w-20 h-20 rounded-xl overflow-hidden border-2 transition-all ${selectedImage === i ? "border-blue-600" : "border-transparent"}`}
+                className={`relative w-20 h-20 rounded-xl overflow-hidden border-2 transition-all ${
+                  selectedImage === i
+                    ? "border-blue-600"
+                    : "border-transparent"
+                }`}
               >
-                <Image src={img} alt={`${product.name} view ${i + 1}`} fill className="object-cover" />
+                <Image
+                  src={img}
+                  alt={`${product.name} view ${i + 1}`}
+                  fill
+                  className="object-cover"
+                />
               </button>
             ))}
           </div>
         </div>
 
-        {/* Right: Info */}
+        {/* RIGHT: INFO */}
         <div>
+          {/* Badges */}
           <div className="flex items-center gap-2 mb-3">
-            <span className="text-blue-600 font-semibold text-sm bg-blue-50 px-3 py-1 rounded-full">{product.brand}</span>
-            {product.isNew && <span className="bg-green-100 text-green-700 text-sm font-semibold px-3 py-1 rounded-full">New</span>}
-            {product.isBestSeller && <span className="bg-orange-100 text-orange-700 text-sm font-semibold px-3 py-1 rounded-full">Best Seller</span>}
+            <span className="text-blue-600 font-semibold text-sm bg-blue-50 px-3 py-1 rounded-full">
+              {product.brand}
+            </span>
+
+            {product.isNew && (
+              <span className="bg-green-100 text-green-700 text-sm font-semibold px-3 py-1 rounded-full">
+                New
+              </span>
+            )}
+
+            {product.isBestSeller && (
+              <span className="bg-orange-100 text-orange-700 text-sm font-semibold px-3 py-1 rounded-full">
+                Best Seller
+              </span>
+            )}
           </div>
 
-          <h1 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-4 leading-tight">{product.name}</h1>
+          {/* Title */}
+          <h1 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-4">
+            {product.name}
+          </h1>
 
           {/* Rating */}
           <div className="flex items-center gap-3 mb-6">
             <div className="flex">
               {[1, 2, 3, 4, 5].map((s) => (
-                <Star key={s} className={`w-5 h-5 ${s <= Math.floor(product.rating) ? "text-yellow-400 fill-current" : "text-gray-200"}`} />
+                <Star
+                  key={s}
+                  className={`w-5 h-5 ${
+                    s <= Math.floor(product.rating)
+                      ? "text-yellow-400 fill-current"
+                      : "text-gray-200"
+                  }`}
+                />
               ))}
             </div>
-            <span className="font-bold text-gray-900">{product.rating}</span>
-            <span className="text-gray-400 text-sm">({product.reviewCount.toLocaleString()} reviews)</span>
+
+            <span className="font-bold text-gray-900">
+              {product.rating}
+            </span>
+
+            <span className="text-gray-400 text-sm">
+              ({product.reviewCount.toLocaleString()} reviews)
+            </span>
           </div>
 
           {/* Price */}
           <div className="flex items-baseline gap-3 mb-6">
-            <span className="text-4xl font-extrabold text-gray-900">${product.price.toLocaleString()}</span>
+            <span className="text-4xl font-extrabold text-gray-900">
+              ${product.price.toLocaleString()}
+            </span>
+
             {product.originalPrice > product.price && (
-              <>
-                <span className="text-xl text-gray-400 line-through">${product.originalPrice.toLocaleString()}</span>
-                <span className="text-green-600 font-bold">Save ${(product.originalPrice - product.price).toLocaleString()}</span>
-              </>
+              <span className="text-xl text-gray-400 line-through">
+                ${product.originalPrice.toLocaleString()}
+              </span>
             )}
           </div>
 
           {/* Description */}
-          <p className="text-gray-600 leading-relaxed mb-6">{product.description}</p>
+          <p className="text-gray-600 leading-relaxed mb-6">
+            {product.description}
+          </p>
 
           {/* Features */}
           <div className="mb-6">
-            <h3 className="font-bold text-gray-900 mb-3">Key Features</h3>
+            <h3 className="font-bold text-gray-900 mb-3">
+              Key Features
+            </h3>
+
             <ul className="space-y-2">
               {product.features.map((f, i) => (
-                <li key={i} className="flex items-start gap-2 text-sm text-gray-600">
-                  <Check className="w-4 h-4 text-blue-600 flex-shrink-0 mt-0.5" />
+                <li
+                  key={i}
+                  className="flex items-start gap-2 text-sm text-gray-600"
+                >
+                  <Check className="w-4 h-4 text-blue-600 mt-0.5" />
                   {f}
                 </li>
               ))}
@@ -126,19 +226,47 @@ export default function ProductPage() {
 
           {/* Stock */}
           <div className="flex items-center gap-2 mb-6">
-            <div className={`w-2 h-2 rounded-full ${product.stock > 10 ? "bg-green-500" : product.stock > 0 ? "bg-yellow-500" : "bg-red-500"}`} />
-            <span className={`text-sm font-medium ${product.stock > 10 ? "text-green-700" : product.stock > 0 ? "text-yellow-700" : "text-red-700"}`}>
-              {product.stock > 10 ? "In Stock" : product.stock > 0 ? `Only ${product.stock} left` : "Out of Stock"}
+            <div
+              className={`w-2 h-2 rounded-full ${
+                product.stock > 10
+                  ? "bg-green-500"
+                  : product.stock > 0
+                  ? "bg-yellow-500"
+                  : "bg-red-500"
+              }`}
+            />
+
+            <span className="text-sm font-medium">
+              {product.stock > 10
+                ? "In Stock"
+                : product.stock > 0
+                ? `Only ${product.stock} left`
+                : "Out of Stock"}
             </span>
           </div>
 
           {/* Quantity */}
           <div className="flex items-center gap-4 mb-6">
-            <span className="text-sm font-medium text-gray-700">Quantity:</span>
-            <div className="flex items-center border border-gray-200 rounded-xl overflow-hidden">
-              <button onClick={() => setQuantity(Math.max(1, quantity - 1))} className="w-10 h-10 flex items-center justify-center text-gray-600 hover:bg-gray-50 transition-colors font-bold">−</button>
-              <span className="w-12 text-center font-semibold text-gray-900">{quantity}</span>
-              <button onClick={() => setQuantity(Math.min(product.stock, quantity + 1))} className="w-10 h-10 flex items-center justify-center text-gray-600 hover:bg-gray-50 transition-colors font-bold">+</button>
+            <span className="text-sm font-medium">Quantity:</span>
+
+            <div className="flex items-center border rounded-xl overflow-hidden">
+              <button
+                onClick={() => setQuantity(Math.max(1, quantity - 1))}
+                className="w-10 h-10"
+              >
+                −
+              </button>
+
+              <span className="w-12 text-center">{quantity}</span>
+
+              <button
+                onClick={() =>
+                  setQuantity(Math.min(product.stock, quantity + 1))
+                }
+                className="w-10 h-10"
+              >
+                +
+              </button>
             </div>
           </div>
 
@@ -146,54 +274,58 @@ export default function ProductPage() {
           <div className="flex gap-3 mb-8">
             <button
               onClick={() => addToCart(product, quantity)}
-              className={`flex-1 flex items-center justify-center gap-2 py-4 rounded-2xl font-bold text-base transition-all ${inCart ? "bg-green-500 text-white" : "bg-blue-600 text-white hover:bg-blue-700 active:scale-95"}`}
+              className={`flex-1 flex items-center justify-center gap-2 py-4 rounded-2xl font-bold ${
+                inCart
+                  ? "bg-green-500 text-white"
+                  : "bg-blue-600 text-white"
+              }`}
             >
               <ShoppingCart className="w-5 h-5" />
               {inCart ? "Added to Cart ✓" : "Add to Cart"}
             </button>
+
             <button
               onClick={() => toggleWishlist(product)}
-              className={`w-14 h-14 rounded-2xl border-2 flex items-center justify-center transition-all ${inWishlist ? "border-red-400 bg-red-50 text-red-500" : "border-gray-200 hover:border-red-300 text-gray-500 hover:text-red-400"}`}
+              className="w-14 h-14 rounded-2xl border flex items-center justify-center"
             >
-              <Heart className={`w-6 h-6 ${inWishlist ? "fill-current" : ""}`} />
+              <Heart
+                className={`w-6 h-6 ${
+                  inWishlist ? "fill-current text-red-500" : ""
+                }`}
+              />
             </button>
           </div>
 
           {/* Perks */}
-          <div className="grid grid-cols-3 gap-3 border-t border-gray-100 pt-6">
+          <div className="grid grid-cols-3 gap-3 border-t pt-6">
             {[
               { icon: Package, text: "Free Delivery" },
               { icon: Shield, text: "1 Year Warranty" },
               { icon: RotateCcw, text: "30-Day Returns" },
             ].map(({ icon: Icon, text }) => (
-              <div key={text} className="flex flex-col items-center gap-1.5 text-center">
+              <div
+                key={text}
+                className="flex flex-col items-center text-center"
+              >
                 <Icon className="w-5 h-5 text-blue-600" />
-                <span className="text-xs font-medium text-gray-600">{text}</span>
+                <span className="text-xs">{text}</span>
               </div>
             ))}
           </div>
         </div>
       </div>
 
-      {/* Specifications */}
-      <div className="bg-gray-50 rounded-3xl p-8 mb-12">
-        <h2 className="text-2xl font-extrabold text-gray-900 mb-6">Specifications</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-          {Object.entries(product.specifications).map(([key, val]) => (
-            <div key={key} className="flex items-start gap-4 bg-white rounded-xl px-5 py-3">
-              <span className="text-sm font-semibold text-gray-500 w-32 flex-shrink-0">{key}</span>
-              <span className="text-sm text-gray-900 font-medium">{val}</span>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Related Products */}
+      {/* Related */}
       {related.length > 0 && (
         <div>
-          <h2 className="text-2xl font-extrabold text-gray-900 mb-6">Related Products</h2>
+          <h2 className="text-2xl font-extrabold mb-6">
+            Related Products
+          </h2>
+
           <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
-            {related.map((p) => <ProductCard key={p.id} product={p} />)}
+            {related.map((p) => (
+              <ProductCard key={p.id} product={p} />
+            ))}
           </div>
         </div>
       )}

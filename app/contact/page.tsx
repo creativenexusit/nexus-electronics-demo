@@ -18,7 +18,7 @@ export default function ContactPage() {
       <div className="text-center mb-12">
         <p className="text-blue-600 font-semibold text-sm uppercase tracking-widest mb-2">Get In Touch</p>
         <h1 className="text-4xl font-extrabold text-gray-900">Contact Us</h1>
-        <p className="text-gray-500 mt-3 max-w-md mx-auto">Have a question? We're here to help. Reach out through any channel below.</p>
+        <p className="text-gray-500 mt-3 max-w-md mx-auto">Have a question? We re here to help. Reach out through any channel below.</p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-5 gap-10">
@@ -59,7 +59,7 @@ export default function ContactPage() {
             <div className="flex flex-col items-center justify-center h-full py-12 gap-4 text-center">
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center text-3xl mb-2">✅</div>
               <h2 className="text-2xl font-extrabold text-gray-900">Message Sent!</h2>
-              <p className="text-gray-500">Thanks for reaching out. We'll get back to you within 24 hours.</p>
+              <p className="text-gray-500">Thanks for reaching out. We ll get back to you within 24 hours.</p>
               <button onClick={() => { setSent(false); setForm({ name: "", email: "", subject: "", message: "" }); }} className="mt-2 text-blue-600 font-medium hover:underline">Send another message</button>
             </div>
           ) : (
