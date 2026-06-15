@@ -79,7 +79,7 @@ export default function CartPage() {
 
         {/* Order Summary */}
         <div>
-          <div className="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm sticky top-24">
+          <div className="bg-white border border-gray-100 rounded-2xl p-4 shadow-sm sticky top-24">
             <h2 className="font-extrabold text-gray-900 text-lg mb-6">Order Summary</h2>
             <div className="space-y-3 mb-6">
               <div className="flex justify-between text-sm text-gray-600">
@@ -118,13 +118,13 @@ export default function CartPage() {
                   <span className="text-sm text-green-700 font-medium">NEXUS10 applied! 10% off</span>
                 </div>
               ) : (
-                <div className="flex gap-2">
+                <div className="flex gap-1">
                   <input
                     type="text"
                     placeholder="Enter code (try NEXUS10)"
                     value={coupon}
                     onChange={(e) => setCoupon(e.target.value)}
-                    className="flex-1 border border-gray-200 rounded-xl px-4 py-2.5 text-sm outline-none focus:ring-2 focus:ring-blue-500"
+                    className="flex-1 border border-gray-200 rounded-xl px-3 py-2.5 text-sm outline-none focus:ring-2 focus:ring-blue-500"
                   />
                   <button onClick={applyCoupon} className="bg-gray-900 text-white px-4 py-2.5 rounded-xl text-sm font-semibold hover:bg-gray-700 transition-colors">
                     Apply
