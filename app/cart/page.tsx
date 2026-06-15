@@ -35,7 +35,7 @@ export default function CartPage() {
   }
 
   return (
-    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    <div className="max-w-6xl mx-auto px-2 sm:px-6 lg:px-8 py-10">
       <div className="flex items-center gap-3 mb-8">
         <Link href="/shop" className="p-2 rounded-xl hover:bg-gray-100 transition-colors">
           <ArrowLeft className="w-5 h-5 text-gray-700" />
@@ -79,7 +79,7 @@ export default function CartPage() {
 
         {/* Order Summary */}
         <div>
-          <div className="bg-white border border-gray-100 rounded-2xl p-4 shadow-sm sticky top-24">
+          <div className="bg-white border border-gray-100 rounded-2xl md:p-6 p-3 shadow-sm sticky top-24">
             <h2 className="font-extrabold text-gray-900 text-lg mb-6">Order Summary</h2>
             <div className="space-y-3 mb-6">
               <div className="flex justify-between text-sm text-gray-600">
@@ -126,7 +126,7 @@ export default function CartPage() {
                     onChange={(e) => setCoupon(e.target.value)}
                     className="flex-1 border border-gray-200 rounded-xl px-3 py-2.5 text-sm outline-none focus:ring-2 focus:ring-blue-500"
                   />
-                  <button onClick={applyCoupon} className="bg-gray-900 text-white px-4 py-2.5 rounded-xl text-sm font-semibold hover:bg-gray-700 transition-colors">
+                  <button onClick={applyCoupon} className="bg-gray-900 text-white px-2  md:px-4 py-1.5 md:py-2.5 rounded-md md:rounded-xl text-xs md:text-sm font-semibold hover:bg-gray-700 transition-colors">
                     Apply
                   </button>
                 </div>
