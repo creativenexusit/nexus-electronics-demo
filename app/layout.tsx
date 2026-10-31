@@ -1,3 +1,4 @@
+
 import type { Metadata } from "next";
 import "./globals.css";
 import { StoreProvider } from "@/context/StoreContext";
@@ -27,29 +28,47 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="bg-white text-neutral-900 min-h-screen flex flex-col">
-         
+
+        {/* Google Tag Manager */}
+        <Script
+          id="google-tag-manager"
+          strategy="afterInteractive"
+        >
+          {`
+            (function(w,d,s,l,i){
+              w[l]=w[l]||[];
+              w[l].push({
+                'gtm.start': new Date().getTime(),
+                event:'gtm.js'
+              });
+              var f=d.getElementsByTagName(s)[0],
+              j=d.createElement(s),
+              dl=l!='dataLayer'?'&l='+l:'';
+              j.async=true;
+              j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+              f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-57266BWM');
+          `}
+        </Script>
+
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-57266BWM"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          />
+        </noscript>
+
         <StoreProvider>
           <Header />
-          <main className="flex-1 pb-16 md:pb-0">{children}</main>
+          <main className="flex-1 pb-16 md:pb-0">
+            {children}
+          </main>
           <Footer />
           <MobileNav />
         </StoreProvider>
 
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-0TWSBRDFP2"
-          strategy="afterInteractive"
-        />
-
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            window.gtag = function() {
-              window.dataLayer.push(arguments);
-            };
-            window.gtag('js', new Date());
-            window.gtag('config', 'G-0TWSBRDFP2');
-          `}
-        </Script>
       </body>
     </html>
   );
